@@ -1,4 +1,4 @@
-*{
+h1{
     margin:0;
     padding:0;
     border:0;
@@ -9,14 +9,13 @@
     line-height:inherit;
     color:inherit;
 }
-h1{
-    color:orangered;
-}
+
 html, body{
-    background-color:blue;
     font-family:Arial, Helvetica, sans-serif;
     font-size:18px;
     line-height:30px;
+    color:#444;
+    text-shadow:1px 1px 0px #f00;
 }
 body{
     text-align:center;
@@ -30,37 +29,29 @@ h1 sub{
     color:#aaa;
     vertical-align:baseline;
 }
- h1 sub::before{
+h1 sub:before{
     content:"(";
+    color:blue;
 }
- h1 sub::after{
-        content: ")";
-    }
+h1 sub:after{
+    content:")";
+    color:blue;
+}
+img {
+    border-radius: 50%;
+}
 
- section{
-     border-top:2px dashed #eee;
-     padding:50px 0;
-     max-width:800px;
-     margin:0 auto;
-     
- }
-.hero{
+.martial{
+    outline:1px solid red;
     height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
-} 
-.hero img{
-    width:100%;
-    height:100%;
 }
 
-.PersonalPic{
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    overflow:hidden;
+.headshot{
+   transition:transform 1s;
 }
-
-
-   
+.headshot:hover{
+    transform:rotate(360deg);
+}
